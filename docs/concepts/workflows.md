@@ -6,6 +6,8 @@ A **workflow** is a monitoring procedure built from connected steps called **nod
 
 Each node does one job, and the connections between nodes pass things along: imagery, model selections, predictions, metrics or reports. Nodes come in four groups.
 
+![Workflow node groups](../assets/workflow-nodes.jpg)
+
 | Group | What the nodes do | Examples |
 |---|---|---|
 | **Data** | Choose what to work on | Imagery, study area, spatial metadata |
