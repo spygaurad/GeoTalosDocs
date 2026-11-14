@@ -73,3 +73,33 @@
 .md-typeset table:not([class]) {
   font-size: 0.75rem;
 }
+
+/* Accessibility: a clear focus ring on every link and control for keyboard
+   users, in the link colour (5:1 or better in both schemes). */
+.md-typeset a:focus-visible,
+.md-nav__link:focus-visible,
+.md-tabs__link:focus-visible,
+.md-header__button:focus-visible,
+.md-search__input:focus-visible,
+.md-typeset .grid.cards a:focus-visible,
+button:focus-visible,
+[tabindex]:focus-visible {
+  outline: 2px solid var(--md-typeset-a-color);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* Respect the reduced motion setting: no smooth scrolling or animated
+   transitions for people who asked their system for less motion. */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
