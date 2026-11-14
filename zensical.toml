@@ -106,9 +106,9 @@ logo = "assets/logo.png"
 # [project.theme.icon]
 # logo = "lucide/smile"
 
-# [project.theme.font]
-# text = "Inter"
-# code = "Jetbrains Mono"
+[project.theme.font]
+text = "Inter"
+code = "JetBrains Mono"
 
 [[project.theme.palette]]
 media = "(prefers-color-scheme)"
