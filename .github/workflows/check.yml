@@ -19,3 +19,7 @@ jobs:
         run: zensical build --clean
       - name: Docs checks (links, placeholders, dashes)
         run: python -m tools.docs_checks docs
+      - name: Install the browser for end-to-end tests
+        run: python -m playwright install --with-deps chromium
+      - name: End-to-end tests on the built site
+        run: python -m pytest tests/e2e -q
