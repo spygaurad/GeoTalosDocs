@@ -4,7 +4,7 @@ A **dataset** is a collection of imagery, for example all drone orthomosaics fro
 
 ## What counts as imagery
 
-GeoTALOS works with georeferenced raster imagery: satellite scenes, drone orthomosaics and other aerial images. Images are stored as **Cloud Optimized GeoTIFFs (COGs)**, a GeoTIFF format that lets GeoTALOS read just the part of the image you are looking at instead of loading the whole file.
+GeoTALOS works with georeferenced raster imagery: satellite scenes, drone orthomosaics and other aerial images. Images are stored as **Cloud Optimized GeoTIFFs (COGs)**, a GeoTIFF format that lets GeoTALOS read only the part of the image on screen instead of loading the whole file.
 
 ## What happens when you upload
 

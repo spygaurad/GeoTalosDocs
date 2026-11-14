@@ -13,6 +13,6 @@ AOIs keep your work focused on the places you care about. You can use an AOI to:
 
 ## AOIs are saved
 
-An AOI is stored as a geographic shape in GeoTALOS, not just drawn on screen. Once saved, it can be reused in any map or workflow, and when new imagery arrives the same AOI can be monitored again without redrawing it.
+GeoTALOS stores each AOI as a geographic shape in the database. Once saved, it can be reused in any map or workflow, and when new imagery arrives the same AOI can be monitored again without redrawing it.
 
 See the [Multi-AOI palm analysis](../tutorials/multi-aoi-palm-analysis.md) tutorial for an example.
