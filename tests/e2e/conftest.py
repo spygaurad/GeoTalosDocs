@@ -53,7 +53,5 @@ def page(browser):
 
 def site_pages() -> list[str]:
     """Every built page as a path relative to the site root, for example 'user-guide/'."""
-    return sorted(
-        str(p.parent.relative_to(SITE_DIR)) + "/" if p.parent != SITE_DIR else ""
-        for p in SITE_DIR.rglob("index.html")
-    )
+    relative = (p.parent.relative_to(SITE_DIR).as_posix() for p in SITE_DIR.rglob("index.html"))
+    return sorted("" if path == "." else f"{path}/" for path in relative)

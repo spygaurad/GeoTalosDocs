@@ -11,16 +11,12 @@ from .content import check_dashes, check_placeholders
 from .links import check_links
 from .problem import Problem
 
-CHECKS: dict[str, Callable[[Path], list[Problem]]] = {
-    "links": check_links,
-    "placeholders": check_placeholders,
-    "dashes": check_dashes,
-}
+CHECKS: tuple[Callable[[Path], list[Problem]], ...] = (check_links, check_placeholders, check_dashes)
 
 
 def run(docs_dir: Path) -> list[Problem]:
     """Run all checks and return every problem found."""
-    return [problem for check in CHECKS.values() for problem in check(docs_dir)]
+    return [problem for check in CHECKS for problem in check(docs_dir)]
 
 
 def main(argv: list[str] | None = None) -> int:

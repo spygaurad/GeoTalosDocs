@@ -1,0 +1,2 @@
+# What the site needs to build. Used by the deploy workflow.
+zensical==0.1.1
