@@ -64,7 +64,13 @@ nav = [
   ] },
 ]
 
-extra_css = ["stylesheets/extra.css"]
+extra_css = [
+  "stylesheets/brand.css",
+  "stylesheets/typography.css",
+  "stylesheets/components.css",
+  "stylesheets/accessibility.css",
+  "stylesheets/responsive.css",
+]
 # extra_javascript = ["javascripts/extra.js"]
 
 [project.theme]

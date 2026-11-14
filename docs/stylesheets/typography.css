@@ -1,0 +1,22 @@
+/* Typography: readable line length, line height and heading steps. */
+
+/* Readability: keep prose lines near 70 characters (ui-ux-pro-max: 65 to 75),
+   body line height 1.6. Tables, code and cards keep the full width. */
+.md-typeset > p,
+.md-typeset > ul > li,
+.md-typeset > ol > li,
+.md-typeset .admonition p {
+  max-width: 72ch;
+}
+.md-typeset {
+  line-height: 1.6;
+}
+
+/* Headings: clear steps between levels. */
+.md-typeset h2 {
+  margin-top: 2em;
+  font-weight: 600;
+}
+.md-typeset h3 {
+  font-weight: 600;
+}
