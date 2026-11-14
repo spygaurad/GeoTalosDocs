@@ -70,7 +70,7 @@ extra_css = ["stylesheets/extra.css"]
 [project.theme]
 # variant = "classic"
 # custom_dir = "overrides"
-# favicon = "images/favicon.png"
+favicon = "assets/logo.png"
 language = "en"
 features = [
   "announce.dismiss",
@@ -101,7 +101,7 @@ features = [
   # "toc.integrate",
 ]
 
-# logo = "assets/logo.png"
+logo = "assets/logo.png"
 
 # [project.theme.icon]
 # logo = "lucide/smile"
@@ -118,12 +118,16 @@ toggle.name = "Switch to light mode"
 [[project.theme.palette]]
 media = "(prefers-color-scheme: light)"
 scheme = "default"
+primary = "custom"
+accent = "custom"
 toggle.icon = "lucide/sun"
 toggle.name = "Switch to dark mode"
 
 [[project.theme.palette]]
 media = "(prefers-color-scheme: dark)"
 scheme = "slate"
+primary = "custom"
+accent = "custom"
 toggle.icon = "lucide/moon"
 toggle.name = "Switch to system preference"
 
