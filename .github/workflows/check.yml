@@ -1,0 +1,21 @@
+name: Checks
+on:
+  push:
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+      - run: pip install -r requirements-dev.txt
+      - name: Unit tests for the checks
+        run: python -m pytest tools -q
+      - name: Build the site
+        run: zensical build --clean
+      - name: Docs checks (links, placeholders, dashes)
+        run: python -m tools.docs_checks docs
