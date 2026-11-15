@@ -1,0 +1,25 @@
+/* Brand: GeoTALOS colours for light and dark mode.
+   Palette from ui-ux-pro-max (nature green + sun amber). */
+
+/* Brand palette: nature green + sun amber.
+   Contrast checked: white on #15803D 5.02:1, #15803D on white 5.02:1,
+   #B45309 on white 5.02:1, #4ADE80 on slate 9.24:1, #FBBF24 on slate 9.64:1. */
+[data-md-color-scheme="default"] {
+  --md-primary-fg-color: #15803D;
+  --md-primary-fg-color--light: #16A34A;
+  --md-primary-fg-color--dark: #166534;
+  --md-primary-bg-color: #FFFFFF;
+  --md-accent-fg-color: #B45309;
+  --md-accent-fg-color--transparent: rgba(217, 119, 6, 0.1);
+  --md-typeset-a-color: #15803D;
+}
+
+[data-md-color-scheme="slate"] {
+  --md-primary-fg-color: #14532D;
+  --md-primary-fg-color--light: #166534;
+  --md-primary-fg-color--dark: #052E16;
+  --md-primary-bg-color: #FFFFFF;
+  --md-accent-fg-color: #FBBF24;
+  --md-accent-fg-color--transparent: rgba(251, 191, 36, 0.1);
+  --md-typeset-a-color: #4ADE80;
+}
