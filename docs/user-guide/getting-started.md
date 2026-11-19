@@ -8,8 +8,6 @@ New to the terms used here? Read [Key Concepts](../concepts/index.md) first.
 
 Open the GeoTALOS address your team gave you and sign in, or create an account. Sign-in is handled by Clerk, so you can use email or any sign-in option your team has turned on.
 
-> **Screenshot:** the sign-in page.
-
 ## 2. Choose your organization
 
 After signing in you see **Select your organization**.
@@ -18,8 +16,6 @@ After signing in you see **Select your organization**.
 - If you are the first person on your team, create a new organization. You become its admin.
 
 Everything you upload or create belongs to the organization you pick here. You can switch organizations later. What you see always depends on the organization selected. See [Organizations, projects and roles](../concepts/organizations.md).
-
-> **Screenshot:** the organization picker.
 
 ## 3. Find your way around
 
@@ -33,8 +29,6 @@ The sidebar on the left has three groups:
 | | **Annotation Schemas** | Define the classes you label, such as "Palm tree" or "Water body" |
 | | **Annotation Sets** | Browse annotations made by people or models |
 | Intelligence | **AI Models** | See the models your organization can run |
-
-> **Screenshot:** the dashboard with the sidebar.
 
 ## 4. Create a project
 
@@ -60,8 +54,6 @@ Full details: [Uploading imagery](uploading-imagery.md).
 1. In your project, open the **Maps** tab and create a map.
 2. Add your dataset as a layer. The imagery appears on the map and loads only the part you are looking at, so even very large orthomosaics stay quick.
 3. Pan and zoom to your study area.
-
-> **Screenshot:** a new map showing an orthomosaic.
 
 From here you can draw an [area of interest](../concepts/aois.md), [run a model](running-models.md) or turn on [reference layers](reference-layers.md).
 

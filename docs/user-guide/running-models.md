@@ -23,8 +23,6 @@ Running a model only inside an AOI is faster and avoids results you do not need.
 5. Fill in the model's options (below).
 6. Click **Run on AOI**.
 
-> **Screenshot:** the Run Inference panel with a model and dataset selected.
-
 The run continues in the background, so you can keep working on the map. It appears in the list under the panel. When it finishes, its results are added to the map as a new annotation layer. Use **Show overlay on map** and **Hide overlay on map** to toggle them.
 
 ## Model options

@@ -52,7 +52,7 @@ Send Email is not built yet. Use **Send Webhook** for notifications.
 
 ### Can I upload GeoJSON labels as a dataset?
 
-No. Datasets are for imagery. Import labels into an annotation set as a GeoJSON FeatureCollection instead.
+No. The upload form accepts `.geojson` files, but only raster images become datasets. Import labels into an annotation set as a GeoJSON FeatureCollection instead.
 
 ## Running GeoTALOS
 

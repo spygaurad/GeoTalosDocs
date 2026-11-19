@@ -23,8 +23,6 @@ Images must be **georeferenced** GeoTIFFs, so GeoTALOS knows where they belong o
     - **Tags** (optional): words to find the dataset later, for example `drone`, `2024`, `site-a`. Press Enter after each tag.
 4. Start the upload. Large files go up in parts, so a slow connection only resends the part that failed.
 
-> **Screenshot:** the upload form with name, type and tags.
-
 ## What happens next
 
 After the upload, GeoTALOS processes the file in four stages, shown as a progress list:
@@ -37,8 +35,6 @@ After the upload, GeoTALOS processes the file in four stages, shown as a progres
 | **Dataset update** | Marks the dataset ready |
 
 When it finishes you see "Dataset ingested and ready for visualization." with two buttons: **View dataset** and **Add to map**.
-
-> **Screenshot:** the progress list and the ready message.
 
 If you see **Upload failed**, the file could not be read as a georeferenced raster. Check it opens in QGIS with the right location, then try again.
 

@@ -6,6 +6,7 @@ Map several kinds of features in one area at once, such as buildings, water bodi
 |---|---|
 | **You will** | Build a workflow with one SAM3 branch per class, merge the results into one multi-class layer, and optionally score it against ground truth |
 | **You need** | An orthomosaic or satellite scene on a map, a saved AOI, an annotation schema with your classes, and SAM3 registered as a model |
+| **In the demo video** | [05:29 Gold mining setup](https://www.youtube.com/watch?v=KoLlAJi2LYg&t=329s) and [12:20 Gold mining automation](https://www.youtube.com/watch?v=KoLlAJi2LYg&t=740s) |
 | **Based on** | The multi-prompt segmentation workflow in the GeoTALOS paper (Figure 6) |
 
 In the paper, the image is `Kotsimba_cog.tif` from the "Kotsimba ELDOR Site" dataset, a mining site from the ELDOR dataset of gold mining in the Amazon.
@@ -19,8 +20,6 @@ One data source feeds three SAM3 branches. Each branch has its own text prompt a
 Select Data Source ──┼→ Run Inference (SAM3: "Water, pond" → Water Bodies) ─────────┼→ Overlay on Map
                      └→ Run Inference (SAM3: "Crops, Farm Crops" → Agricultural Crops)┘
 ```
-
-> **Screenshot:** the workflow from Figure 6 of the paper.
 
 ## Step 1: Prepare the classes
 
@@ -51,8 +50,6 @@ The text prompt says what to look for; the output class is the label every resul
 ## Step 4: Run and review
 
 Save and run. When it finishes, the map shows one layer per class, each in its class colour.
-
-> **Screenshot:** buildings, water and crops segmented over the mining site.
 
 Review each class: delete false shapes, draw missed ones and verify the rest. See [Reviewing annotations](../user-guide/reviewing-annotations.md).
 

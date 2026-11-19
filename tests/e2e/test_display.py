@@ -26,6 +26,20 @@ def test_no_sideways_scroll_on_a_phone(browser, base_url, path):
     assert overflow <= 0, f"{path} scrolls sideways by {overflow}px at 375px"
 
 
+def test_left_panel_and_full_width_prose_on_desktop(browser, base_url):
+    """Navigation lives in the left panel (no top tabs) and prose is not capped."""
+    context = browser.new_context(viewport={"width": 1440, "height": 900})
+    page = context.new_page()
+    page.goto(base_url + "user-guide/getting-started/")
+    assert page.locator(".md-tabs").count() == 0
+    panel = page.locator(".md-sidebar--primary")
+    for section in ["Key Concepts", "User Guide", "Tutorials", "Developer Guide", "Reference"]:
+        assert panel.get_by_role("link", name=section, exact=True).is_visible(), section
+    max_width = page.evaluate("getComputedStyle(document.querySelector('.md-typeset > p')).maxWidth")
+    context.close()
+    assert max_width == "none"
+
+
 FOCUSABLE_TO_CHECK = 15
 
 

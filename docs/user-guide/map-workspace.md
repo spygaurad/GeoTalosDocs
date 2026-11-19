@@ -4,8 +4,6 @@ The map is where most work in GeoTALOS happens: you look at imagery, draw study 
 
 Open a map from your project's **Maps** tab. **Back to project** returns you to the project.
 
-> **Screenshot:** the full map workspace with the left panel, map and right panel.
-
 ## Layout
 
 | Area | What it holds |
@@ -53,8 +51,6 @@ Shapes are used for two things:
 
 - **Areas of interest (AOIs):** saved study areas that focus searches, model runs and reports. See [Areas of interest](../concepts/aois.md).
 - **Annotations:** labelled shapes such as a palm crown or a water body. See [Reviewing annotations](reviewing-annotations.md).
-
-> **Screenshot:** drawing a polygon AOI, with its area and perimeter in the information panel.
 
 ## Selecting a feature
 
