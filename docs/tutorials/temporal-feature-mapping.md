@@ -18,8 +18,6 @@ Date-ordered images → clip each to the AOI → segment each date → one layer
 
 Each derived layer stays linked to the capture date of its source image, so the map can play them in order.
 
-> **Screenshot:** Figure 7 of the paper: the date-aware map and the workflow.
-
 ## Step 1: Check your dates
 
 Upload the images and confirm each one has the right capture date. Name files with their date, such as `2024-05-12_site.tif`, so GeoTALOS orders them correctly. See [Capture dates](../user-guide/uploading-imagery.md#capture-dates).
@@ -55,8 +53,6 @@ For a repeatable version:
 4. Use **From date** and **To date** to focus on one period.
 
 Watch for features that appear, grow or disappear. See [Temporal analysis](../user-guide/temporal-analysis.md).
-
-> **Screenshot:** the mining area on two dates, segmented.
 
 ## Step 5: Measure the change
 

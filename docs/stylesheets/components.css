@@ -1,4 +1,4 @@
-/* Components: video embed, home page cards, screenshot placeholders, tables. */
+/* Components: video embed, home page cards, tables. */
 
 /* 16:9 responsive video embed */
 .video-wrapper { position: relative; width: 100%; aspect-ratio: 16 / 9; margin: 1em 0; }
@@ -9,17 +9,6 @@
 .md-typeset .grid.cards > ul > li > p:first-child .twemoji,
 .md-typeset .grid.cards > ul > li > p:first-child svg {
   color: var(--md-typeset-a-color);
-}
-
-/* Screenshot placeholders ("> **Screenshot:** ...") read as placeholders,
-   not as quotes. */
-.md-typeset blockquote {
-  border-left: none;
-  border: 1px dashed var(--md-default-fg-color--lighter);
-  border-radius: 6px;
-  padding: 0.6em 1em;
-  color: var(--md-default-fg-color--light);
-  background: var(--md-default-fg-color--lightest);
 }
 
 /* Tables: compact cells so more rows fit. */

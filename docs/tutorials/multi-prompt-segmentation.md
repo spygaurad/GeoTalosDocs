@@ -20,8 +20,6 @@ Select Data Source ──┼→ Run Inference (SAM3: "Water, pond" → Water Bod
                      └→ Run Inference (SAM3: "Crops, Farm Crops" → Agricultural Crops)┘
 ```
 
-> **Screenshot:** the workflow from Figure 6 of the paper.
-
 ## Step 1: Prepare the classes
 
 In **Annotation Schemas**, make sure your schema has one class per feature, for example **Buildings**, **Water Bodies** and **Agricultural Crops**. Each SAM3 branch writes into one of these classes.
@@ -51,8 +49,6 @@ The text prompt says what to look for; the output class is the label every resul
 ## Step 4: Run and review
 
 Save and run. When it finishes, the map shows one layer per class, each in its class colour.
-
-> **Screenshot:** buildings, water and crops segmented over the mining site.
 
 Review each class: delete false shapes, draw missed ones and verify the rest. See [Reviewing annotations](../user-guide/reviewing-annotations.md).
 

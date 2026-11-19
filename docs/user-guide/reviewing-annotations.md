@@ -11,8 +11,6 @@ On the map:
 
 Colours always follow the class, so a verified palm and a draft palm share a colour but not a line style.
 
-> **Screenshot:** draft and verified palm crowns side by side.
-
 ## Review one annotation at a time
 
 Click an annotation on the map. Its details appear in the panel: **Class**, **Schema**, **Confidence** and where it came from. A small popup offers two actions:

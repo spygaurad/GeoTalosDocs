@@ -33,8 +33,6 @@ Opening a pipeline shows the editor:
 
 Click the pipeline's name to rename it.
 
-> **Screenshot:** the editor with the node catalog, a three-node workflow and the run history.
-
 ## Build a workflow
 
 1. **Add nodes** in any of three ways: drag from the catalog onto the canvas, right-click the canvas, or use the toolbar's add button.

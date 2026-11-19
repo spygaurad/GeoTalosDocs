@@ -30,8 +30,6 @@ Connect several **Run Inference** outputs to one Generate Report node to compare
 3. Open the Generate Report step to see the report.
 4. Click **Download PDF** for a formatted copy with tables, ready to share.
 
-> **Screenshot:** a report with two AOI sections and the Download PDF button.
-
 The [Multi-AOI palm analysis](../tutorials/multi-aoi-palm-analysis.md) tutorial builds a report like this, one section per AOI.
 
 ## GeoJSON export

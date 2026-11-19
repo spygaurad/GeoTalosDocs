@@ -20,7 +20,7 @@ Open http://localhost:8000/GeoTalosDocs/. The preview reloads when you save a fi
 |---|---|
 | `docs/` | The pages. The navigation order is the `nav` list in `zensical.toml`. |
 | `docs/assets/` | Images and the logo |
-| `docs/stylesheets/` | Custom styles, one file per concern: `brand.css` (colours), `typography.css`, `components.css` (cards, video, screenshot boxes, tables), `accessibility.css`, `responsive.css` (loaded last) |
+| `docs/stylesheets/` | Custom styles, one file per concern: `brand.css` (colours), `typography.css`, `components.css` (cards, video, tables), `accessibility.css`, `responsive.css` (loaded last) |
 | `tools/docs_checks/` | Checks for the page source: broken links and anchors, leftover placeholders, dashes |
 | `tests/e2e/` | Browser tests of the built site |
 | `.github/workflows/check.yml` | Runs all tests and checks on every push and pull request |
@@ -32,7 +32,7 @@ Open http://localhost:8000/GeoTalosDocs/. The preview reloads when you save a fi
 - Use the exact button and field names from the GeoTALOS interface, in **bold**.
 - Check facts against the code or the paper before writing them.
 - No em dashes, en dashes or `" - "` used as a dash. Use a period, comma, colon or parentheses.
-- Mark a missing screenshot with a quote line: `> **Screenshot:** what it should show.`
+- No screenshots for now, text only. Short video clips will be added later.
 
 ## Run the checks and tests
 

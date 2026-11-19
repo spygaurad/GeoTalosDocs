@@ -27,8 +27,6 @@ Details: [Uploading imagery](../user-guide/uploading-imagery.md).
 2. Add the dataset from the **Library**.
 3. Zoom in until you can see individual crowns.
 
-> **Screenshot:** the orthomosaic on the map, zoomed in to show palm crowns.
-
 ## Step 3: Draw an area of interest
 
 Draw a polygon or rectangle around the part of the forest you want to survey. Start small (a few hectares) for your first run, so it finishes quickly.
@@ -50,8 +48,6 @@ Draw a polygon or rectangle around the part of the forest you want to survey. St
 5. In **Overlay on Map**, pick the map ("Palm Study").
 6. Save and run.
 
-> **Screenshot:** the three-node workflow from Figure 5 of the paper.
-
 When the run finishes, the detections appear on the map as a new annotation layer of palm crowns.
 
 ## Step 5: Review the detections
@@ -62,8 +58,6 @@ The detections are drafts, drawn with a dashed outline. Check them:
 2. For each detection: **Verify annotation** if it is a palm, **Delete annotation** if it is not.
 3. Draw any palms the model missed and save them with **Add Annotation**.
 4. When the area is done, set the annotation set's status to **Verified**.
-
-> **Screenshot:** reviewed crowns, verified ones solid, drafts dashed.
 
 Details: [Reviewing annotations](../user-guide/reviewing-annotations.md).
 

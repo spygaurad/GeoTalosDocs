@@ -23,8 +23,6 @@ Licences and download links for each are in [Data sources and licences](../refer
 2. In the layers panel on the left, find the **Reference layers** section.
 3. Switch on the layers you want. Switch a layer off the same way.
 
-> **Screenshot:** the Reference layers section with Ramsar Sites and HydroRIVERS switched on over imagery.
-
 Each layer's credit appears in the attribution line at the bottom of the map while it is on.
 
 ## Good to know

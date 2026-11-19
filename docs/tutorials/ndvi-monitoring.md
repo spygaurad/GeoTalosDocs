@@ -41,8 +41,6 @@ Draw and save an AOI over the area to monitor. Keep it the same for every date: 
 3. Check the bands. GeoTALOS picks the near-infrared and red bands on its own; if your sensor stores them in another order, pick them by hand.
 4. The legend shows **Bare / stressed** at the low end and **Healthy canopy** at the high end.
 
-> **Screenshot:** the AOI in NDVI colours with the legend and timeline (Figure 8 of the paper).
-
 ## Step 4: Hide what you do not care about
 
 Raise the **Threshold** slider to hide low NDVI values. At about 0.5, bare ground and stressed vegetation disappear and only healthy canopy stays coloured. Keep the same threshold for every date so they compare fairly.

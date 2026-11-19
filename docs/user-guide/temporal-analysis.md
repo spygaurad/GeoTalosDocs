@@ -15,8 +15,6 @@ When you have imagery of the same place from several dates, GeoTALOS lines it up
 3. Choose what to show under **Index** (below).
 4. The timeline opens at the bottom of the map with every date that has imagery inside the AOI.
 
-> **Screenshot:** the timeline under the map, with an AOI shown in NDVI colours.
-
 ## Playing through time
 
 | Control | Does | Keyboard |

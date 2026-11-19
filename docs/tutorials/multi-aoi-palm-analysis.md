@@ -19,8 +19,6 @@ Select Data Source (AOI 1) → Run Inference (YOLO) ─┐
 Select Data Source (AOI 2) → Run Inference (YOLO) ─┘
 ```
 
-> **Screenshot:** the workflow from Figure 4 of the paper.
-
 ## Step 1: Save the AOIs
 
 On your map, draw each study area and save it, for example "AOI 1" and "AOI 2". Saved AOIs can be chosen in workflows. See [Areas of interest](../concepts/aois.md).
@@ -56,8 +54,6 @@ When the run finishes:
 
 - the map shows the detections from both AOIs, each inside its own area,
 - the run history shows the report.
-
-> **Screenshot:** the map with detections in AOI 1 and AOI 2.
 
 ## Step 6: Read the report
 
