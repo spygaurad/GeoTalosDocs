@@ -28,3 +28,8 @@
 .md-typeset li {
   margin-bottom: 0.25em;
 }
+/* Nested lists stay tight; the block margin above is for top-level lists. */
+.md-typeset li > ul,
+.md-typeset li > ol {
+  margin-bottom: 0.25em;
+}
