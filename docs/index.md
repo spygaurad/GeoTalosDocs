@@ -52,6 +52,19 @@ A 17-minute walkthrough of GeoTALOS by Suraj Prasai: the map workspace, running 
 
 If the video does not load, [watch it on YouTube](https://www.youtube.com/watch?v=KoLlAJi2LYg).
 
+### Chapters
+
+| Time | Part |
+|---|---|
+| [00:00](https://www.youtube.com/watch?v=KoLlAJi2LYg&t=0s) | Introduction |
+| [00:12](https://www.youtube.com/watch?v=KoLlAJi2LYg&t=12s) | Table of contents |
+| [01:00](https://www.youtube.com/watch?v=KoLlAJi2LYg&t=60s) | Dataset ingestion, schema definition and model registration |
+| [02:34](https://www.youtube.com/watch?v=KoLlAJi2LYg&t=154s) | Project setup: Peru forest palm monitoring |
+| [05:29](https://www.youtube.com/watch?v=KoLlAJi2LYg&t=329s) | Project setup: gold mining (ELDOR) |
+| [07:22](https://www.youtube.com/watch?v=KoLlAJi2LYg&t=442s) | Temporal playback |
+| [09:15](https://www.youtube.com/watch?v=KoLlAJi2LYg&t=555s) | Workflow automation: palm monitoring |
+| [12:20](https://www.youtube.com/watch?v=KoLlAJi2LYg&t=740s) | Workflow automation: gold mining |
+
 ## Questions
 
 Answers to common problems, from missing data to setup errors, are in the [FAQ](reference/faq.md). Terms are explained in the [Glossary](reference/glossary.md).
