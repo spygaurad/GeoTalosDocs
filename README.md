@@ -18,7 +18,7 @@ Open http://localhost:8000/GeoTalosDocs/. The preview reloads when you save a fi
 
 | Path | What |
 |---|---|
-| `docs/` | The pages. The navigation order is the `nav` list in `zensical.toml`. |
+| `docs/` | The pages. The navigation order is the `nav` list in `zensical.toml`; it shows as the left panel (no top tabs). |
 | `docs/assets/` | Images and the logo |
 | `docs/stylesheets/` | Custom styles, one file per concern: `brand.css` (colours), `typography.css`, `components.css` (cards, video, tables), `accessibility.css`, `responsive.css` (loaded last) |
 | `tools/docs_checks/` | Checks for the page source: broken links and anchors, leftover placeholders, dashes |
