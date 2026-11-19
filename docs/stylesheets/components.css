@@ -22,10 +22,10 @@
   background: var(--md-default-fg-color--lightest);
 }
 
-/* Tables: a little more room per cell. */
+/* Tables: compact cells so more rows fit. */
 .md-typeset table:not([class]) th,
 .md-typeset table:not([class]) td {
-  padding: 0.75em 1em;
+  padding: 0.5em 0.8em;
   vertical-align: top;
 }
 .md-typeset table:not([class]) {

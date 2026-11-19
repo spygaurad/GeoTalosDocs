@@ -8,11 +8,23 @@
   line-height: 1.6;
 }
 
-/* Headings: clear steps between levels. */
+/* Headings and blocks: tighter vertical rhythm, closer to the QGIS docs. */
+.md-typeset h1 {
+  margin-bottom: 0.8em;
+}
 .md-typeset h2 {
-  margin-top: 2em;
+  margin: 1.4em 0 0.6em;
   font-weight: 600;
 }
 .md-typeset h3 {
+  margin: 1.2em 0 0.5em;
   font-weight: 600;
+}
+.md-typeset p,
+.md-typeset ul,
+.md-typeset ol {
+  margin-bottom: 0.8em;
+}
+.md-typeset li {
+  margin-bottom: 0.25em;
 }
