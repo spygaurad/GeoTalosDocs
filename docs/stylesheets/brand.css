@@ -1,25 +1,24 @@
-/* Brand: GeoTALOS colours for light and dark mode.
-   Palette from ui-ux-pro-max (nature green + sun amber). */
-
-/* Brand palette: nature green + sun amber.
-   Contrast checked: white on #15803D 5.02:1, #15803D on white 5.02:1,
-   #B45309 on white 5.02:1, #4ADE80 on slate 9.24:1, #FBBF24 on slate 9.64:1. */
+/* Brand: Wake Forest colours (brand.wfu.edu) for light and dark mode.
+   Black header, Old Gold links. Dark mode golds are lighter shades of
+   Old Gold so they stay readable on the dark background.
+   Contrast: #8C6D2C on white 4.84:1, #755A23 on white 6.48:1,
+   white on #1A1A1A 17.4:1, #C9A55C on slate 6.97:1, #D4B26A on slate 8.02:1. */
 [data-md-color-scheme="default"] {
-  --md-primary-fg-color: #15803D;
-  --md-primary-fg-color--light: #16A34A;
-  --md-primary-fg-color--dark: #166534;
+  --md-primary-fg-color: #1A1A1A;
+  --md-primary-fg-color--light: #2B2B2B;
+  --md-primary-fg-color--dark: #0A0A0A;
   --md-primary-bg-color: #FFFFFF;
-  --md-accent-fg-color: #B45309;
-  --md-accent-fg-color--transparent: rgba(217, 119, 6, 0.1);
-  --md-typeset-a-color: #15803D;
+  --md-accent-fg-color: #755A23;
+  --md-accent-fg-color--transparent: rgba(140, 109, 44, 0.1);
+  --md-typeset-a-color: #8C6D2C;
 }
 
 [data-md-color-scheme="slate"] {
-  --md-primary-fg-color: #14532D;
-  --md-primary-fg-color--light: #166534;
-  --md-primary-fg-color--dark: #052E16;
+  --md-primary-fg-color: #1A1A1A;
+  --md-primary-fg-color--light: #2B2B2B;
+  --md-primary-fg-color--dark: #0A0A0A;
   --md-primary-bg-color: #FFFFFF;
-  --md-accent-fg-color: #FBBF24;
-  --md-accent-fg-color--transparent: rgba(251, 191, 36, 0.1);
-  --md-typeset-a-color: #4ADE80;
+  --md-accent-fg-color: #D4B26A;
+  --md-accent-fg-color--transparent: rgba(201, 165, 92, 0.1);
+  --md-typeset-a-color: #C9A55C;
 }
