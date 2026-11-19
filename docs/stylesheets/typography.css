@@ -1,12 +1,8 @@
-/* Typography: readable line length, line height and heading steps. */
+/* Typography and layout: fit more on screen, like the QGIS docs and GeoLibre. */
 
-/* Readability: keep prose lines near 70 characters (ui-ux-pro-max: 65 to 75),
-   body line height 1.6. Tables, code and cards keep the full width. */
-.md-typeset > p,
-.md-typeset > ul > li,
-.md-typeset > ol > li,
-.md-typeset .admonition p {
-  max-width: 72ch;
+/* Wider page (GeoLibre uses 82rem), and prose uses the full content width. */
+.md-grid {
+  max-width: 82rem;
 }
 .md-typeset {
   line-height: 1.6;
