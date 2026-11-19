@@ -6,6 +6,7 @@ Turn a drone orthomosaic into a reviewed map of palm crowns. This is the simples
 |---|---|
 | **You will** | Run a palm detection model on an orthomosaic, review the detections and export the result |
 | **You need** | A drone orthomosaic of palm forest (GeoTIFF), and a palm detection model registered in your organization |
+| **In the demo video** | [02:34 Peru palm monitoring setup](https://www.youtube.com/watch?v=KoLlAJi2LYg&t=154s) and [09:15 Palm monitoring automation](https://www.youtube.com/watch?v=KoLlAJi2LYg&t=555s) |
 | **Based on** | The palm crown detection workflow in the GeoTALOS paper (Figure 5) |
 
 In the paper, the image is `FCAT1.tif` from a dataset called "Palm COG Orthomosaics", and the model is a YOLO detector called "Crown Center Detection". Use your own names below.

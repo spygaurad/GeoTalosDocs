@@ -6,6 +6,7 @@ Map the same feature on every date in an image series, then step through time to
 |---|---|
 | **You will** | Run a model on every image in a date-ordered series inside one AOI, play the results through time and measure the change |
 | **You need** | Several images of the same area from different dates, with correct capture dates, a saved AOI and a segmentation or detection model |
+| **In the demo video** | [07:22 Temporal playback](https://www.youtube.com/watch?v=KoLlAJi2LYg&t=442s) and [12:20 Gold mining automation](https://www.youtube.com/watch?v=KoLlAJi2LYg&t=740s) |
 | **Based on** | The temporal feature mapping workflow in the GeoTALOS paper (Figure 7) |
 
 In the paper, the series runs from December 2023 to August 2025, and segmentation is applied to each date to follow landscape change at a mining site.

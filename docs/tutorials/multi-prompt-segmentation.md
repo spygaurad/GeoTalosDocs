@@ -6,6 +6,7 @@ Map several kinds of features in one area at once, such as buildings, water bodi
 |---|---|
 | **You will** | Build a workflow with one SAM3 branch per class, merge the results into one multi-class layer, and optionally score it against ground truth |
 | **You need** | An orthomosaic or satellite scene on a map, a saved AOI, an annotation schema with your classes, and SAM3 registered as a model |
+| **In the demo video** | [05:29 Gold mining setup](https://www.youtube.com/watch?v=KoLlAJi2LYg&t=329s) and [12:20 Gold mining automation](https://www.youtube.com/watch?v=KoLlAJi2LYg&t=740s) |
 | **Based on** | The multi-prompt segmentation workflow in the GeoTALOS paper (Figure 6) |
 
 In the paper, the image is `Kotsimba_cog.tif` from the "Kotsimba ELDOR Site" dataset, a mining site from the ELDOR dataset of gold mining in the Amazon.

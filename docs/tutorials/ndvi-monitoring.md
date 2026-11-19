@@ -6,6 +6,7 @@ Follow vegetation health in one area over many dates without any model. NDVI tur
 |---|---|
 | **You will** | Show NDVI for one AOI on every date in a series, hide low values with a threshold and compare dates |
 | **You need** | Multispectral imagery with a **near-infrared** band (satellite scenes or a multispectral drone camera), several dates of the same area, and a saved AOI |
+| **In the demo video** | [07:22 Temporal playback](https://www.youtube.com/watch?v=KoLlAJi2LYg&t=442s) |
 | **Based on** | The NDVI temporal monitoring case in the GeoTALOS paper (Figure 8) |
 
 In the paper, the series covers seven dates from December 2023 to December 2025. The same AOI and filtering rule are applied to every date, so differences between images come from the vegetation, not from a different area or setting.

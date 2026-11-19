@@ -6,6 +6,7 @@ Run the same palm model over several study areas at once and get one report with
 |---|---|
 | **You will** | Build a workflow that detects palms in two AOIs, shows both results on one map and writes a per-AOI report |
 | **You need** | An orthomosaic on a map, two or more saved AOIs, and a palm detection model (YOLO in the paper) |
+| **In the demo video** | [09:15 Palm monitoring automation](https://www.youtube.com/watch?v=KoLlAJi2LYg&t=555s) |
 | **Based on** | The multi-AOI palm analysis workflow in the GeoTALOS paper (Figure 4) |
 | **Do first** | [Palm crown detection](palm-crown-detection.md) |
 
