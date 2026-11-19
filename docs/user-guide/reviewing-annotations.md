@@ -22,6 +22,8 @@ Click an annotation on the map. Its details appear in the panel: **Class**, **Sc
 
 A verified annotation cannot be verified again. To undo a verification, delete it from the verified set.
 
+The popup has no edit action. If a prediction has the wrong class or shape, delete it and draw the right one (see [Add what the model missed](#add-what-the-model-missed)).
+
 ## Add what the model missed
 
 1. Open the annotation drawing tools and choose a shape (point, polygon, rectangle and so on).
