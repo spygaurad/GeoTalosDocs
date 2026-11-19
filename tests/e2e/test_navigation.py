@@ -6,7 +6,7 @@ import pytest
 from playwright.sync_api import expect
 
 HOME_CARDS = ["Getting started", "Tutorials", "User Guide", "Developer Guide"]
-TABS = ["Key Concepts", "User Guide", "Tutorials", "Developer Guide", "Reference"]
+SECTIONS = ["Key Concepts", "User Guide", "Tutorials", "Developer Guide", "Reference"]
 
 
 def expect_heading(page, text: str) -> None:
@@ -31,11 +31,11 @@ def test_home_cards_open_the_right_page(page, base_url, link_text):
     expect_heading(page, link_text)
 
 
-@pytest.mark.parametrize("tab", TABS)
-def test_top_tabs_navigate(page, base_url, tab):
+@pytest.mark.parametrize("section", SECTIONS)
+def test_left_panel_navigates(page, base_url, section):
     page.goto(base_url)
-    page.locator(".md-tabs").get_by_role("link", name=tab, exact=True).click()
-    expect_heading(page, tab)
+    page.locator(".md-sidebar--primary").get_by_role("link", name=section, exact=True).click()
+    expect_heading(page, section)
 
 
 def test_search_finds_ndvi_tutorial(page, base_url):

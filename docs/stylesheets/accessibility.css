@@ -4,7 +4,6 @@
    users, in the link colour (5:1 or better in both schemes). */
 .md-typeset a:focus-visible,
 .md-nav__link:focus-visible,
-.md-tabs__link:focus-visible,
 .md-header__button:focus-visible,
 .md-search__input:focus-visible,
 .md-typeset .grid.cards a:focus-visible,
