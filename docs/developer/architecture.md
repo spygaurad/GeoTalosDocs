@@ -2,7 +2,10 @@
 
 GeoTALOS is split into four tiers. Interactive map use stays fast because slow work (ingestion, model inference, exports) runs in background workers, and all data and storage services are open source and self-hostable.
 
-![GeoTALOS architecture](../assets/architecture.jpg)
+<figure class="doc-figure">
+  <a href="../assets/paper-fig1-overview.webp"><img src="../assets/paper-fig1-overview.webp" alt="GeoTALOS overview: user actions feed the client tier (map workspace and visual workflow editor), which talks to the API tier (FastAPI, auth and tenancy, typed workflow requests, job submission and polling), which drives the execution tier (workflow orchestrator, model service interface, external model services) and the data and storage tier (imagery catalog, model registry, annotation store, published map layers, provenance records), producing reviewed map layers, reports, alerts and GeoJSON." loading="lazy"></a>
+  <figcaption>GeoTALOS overview: user actions, the four tiers and the outputs. Figure 1 of the GeoTALOS paper (SIGSPATIAL 2026).</figcaption>
+</figure>
 
 ## The four tiers
 
@@ -32,6 +35,11 @@ Keeping them separate keeps tenant-scoped workflow state apart from catalog meta
 ## Worker queues
 
 Named queues stop long jobs from blocking interactive use. Each worker container listens to its own queues:
+
+<figure class="doc-figure">
+  <a href="../assets/diagram-celery.svg"><img src="../assets/diagram-celery.svg" alt="Celery queues: the API and Celery Beat put jobs on named queues in the Redis broker, and five worker containers each listen to their own queues." loading="lazy"></a>
+  <figcaption>Celery worker queues.</figcaption>
+</figure>
 
 | Worker | Queues | Typical jobs |
 |---|---|---|
