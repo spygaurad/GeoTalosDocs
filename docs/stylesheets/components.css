@@ -20,3 +20,37 @@
 .md-typeset table:not([class]) {
   font-size: 0.75rem;
 }
+
+/* Figures: paper figures and diagrams sit on a white card so dark text in
+   transparent figures stays readable in dark mode. The image links to the
+   full size file. */
+.md-typeset figure.doc-figure {
+  margin: 1em 0;
+  max-width: 100%;
+}
+.md-typeset figure.doc-figure img {
+  background: #FFFFFF;
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 6px;
+  padding: 0.4em;
+  max-height: 26rem;
+  width: auto;
+  max-width: 100%;
+}
+.md-typeset figure.doc-figure figcaption {
+  font-size: 0.7rem;
+  color: var(--md-default-fg-color--light);
+  max-width: none;
+}
+
+/* Two columns: text on the left, figure on the right. Stacks on small
+   screens (see responsive.css). */
+.md-typeset .split {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 1.5rem;
+  align-items: start;
+}
+.md-typeset .split > figure.doc-figure {
+  margin-top: 0;
+}

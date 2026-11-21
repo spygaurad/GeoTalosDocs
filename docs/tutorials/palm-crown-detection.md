@@ -9,6 +9,11 @@ Turn a drone orthomosaic into a reviewed map of palm crowns. This is the simples
 | **In the demo video** | [02:34 Peru palm monitoring setup](https://www.youtube.com/watch?v=KoLlAJi2LYg&t=154s) and [09:15 Palm monitoring automation](https://www.youtube.com/watch?v=KoLlAJi2LYg&t=555s) |
 | **Based on** | The palm crown detection workflow in the GeoTALOS paper (Figure 5) |
 
+<figure class="doc-figure">
+  <a href="../assets/paper-fig5-palm-crown.webp"><img src="../assets/paper-fig5-palm-crown.webp" alt="Palm crown detection workflow: a YOLO detector turns an orthomosaic into a draft annotation layer of palm crowns." loading="lazy"></a>
+  <figcaption>Palm crown detection: a YOLO detector converts an orthomosaic into a draft annotation layer. Figure 5 of the GeoTALOS paper (SIGSPATIAL 2026).</figcaption>
+</figure>
+
 In the paper, the image is `FCAT1.tif` from a dataset called "Palm COG Orthomosaics", and the model is a YOLO detector called "Crown Center Detection". Use your own names below.
 
 !!! note "No palm model in the list?"

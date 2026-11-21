@@ -9,6 +9,11 @@ Follow vegetation health in one area over many dates without any model. NDVI tur
 | **In the demo video** | [07:22 Temporal playback](https://www.youtube.com/watch?v=KoLlAJi2LYg&t=442s) |
 | **Based on** | The NDVI temporal monitoring case in the GeoTALOS paper (Figure 8) |
 
+<figure class="doc-figure">
+  <a href="../assets/paper-fig8-ndvi.webp"><img src="../assets/paper-fig8-ndvi.webp" alt="NDVI monitoring: an NDVI filter applied to the same AOI on each date, shown as a row of date-indexed vegetation maps with arrows in date order." loading="lazy"></a>
+  <figcaption>NDVI monitoring: an NDVI filtering step and date-indexed vegetation maps over one AOI; the arrows show the order to inspect them. Figure 8 of the GeoTALOS paper (SIGSPATIAL 2026).</figcaption>
+</figure>
+
 In the paper, the series covers seven dates from December 2023 to December 2025. The same AOI and filtering rule are applied to every date, so differences between images come from the vegetation, not from a different area or setting.
 
 !!! note "Standard drone photos will not work"

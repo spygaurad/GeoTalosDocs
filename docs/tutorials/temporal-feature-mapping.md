@@ -9,6 +9,11 @@ Map the same feature on every date in an image series, then step through time to
 | **In the demo video** | [07:22 Temporal playback](https://www.youtube.com/watch?v=KoLlAJi2LYg&t=442s) and [12:20 Gold mining automation](https://www.youtube.com/watch?v=KoLlAJi2LYg&t=740s) |
 | **Based on** | The temporal feature mapping workflow in the GeoTALOS paper (Figure 7) |
 
+<figure class="doc-figure">
+  <a href="../assets/paper-fig7-temporal.webp"><img src="../assets/paper-fig7-temporal.webp" alt="Temporal feature mapping workflow: segmentation and rule-based extraction applied to every image in a date-ordered collection." loading="lazy"></a>
+  <figcaption>Temporal feature mapping: segmentation and rule-based extraction applied across a temporal collection. Figure 7 of the GeoTALOS paper (SIGSPATIAL 2026).</figcaption>
+</figure>
+
 In the paper, the series runs from December 2023 to August 2025, and segmentation is applied to each date to follow landscape change at a mining site.
 
 ## How it works
