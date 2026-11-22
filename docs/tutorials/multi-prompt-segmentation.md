@@ -9,6 +9,11 @@ Map several kinds of features in one area at once, such as buildings, water bodi
 | **In the demo video** | [05:29 Gold mining setup](https://www.youtube.com/watch?v=KoLlAJi2LYg&t=329s) and [12:20 Gold mining automation](https://www.youtube.com/watch?v=KoLlAJi2LYg&t=740s) |
 | **Based on** | The multi-prompt segmentation workflow in the GeoTALOS paper (Figure 6) |
 
+<figure class="doc-figure">
+  <a href="../assets/paper-fig6-multi-prompt.webp"><img src="../assets/paper-fig6-multi-prompt.webp" alt="Multi-prompt segmentation workflow: several SAM3 prompt branches, one per class, are merged into one multi-class annotation layer." loading="lazy"></a>
+  <figcaption>Multi-prompt segmentation: several SAM3 prompt branches are merged into a single multi-class annotation layer. Figure 6 of the GeoTALOS paper (SIGSPATIAL 2026).</figcaption>
+</figure>
+
 In the paper, the image is `Kotsimba_cog.tif` from the "Kotsimba ELDOR Site" dataset, a mining site from the ELDOR dataset of gold mining in the Amazon.
 
 ## How the workflow works

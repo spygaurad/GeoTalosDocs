@@ -10,6 +10,11 @@ GeoTALOS never sends a whole image or a whole annotation set to the browser. Eve
 
 ## Raster tiles
 
+<figure class="doc-figure">
+  <a href="../assets/diagram-titiler.svg"><img src="../assets/diagram-titiler.svg" alt="Raster tile path: the browser map asks the API tile proxy, which forwards to TiTiler; TiTiler finds the scenes in pgSTAC and reads only the needed byte ranges of the COGs in MinIO." loading="lazy"></a>
+  <figcaption>Raster tiles: browser, API tile proxy, TiTiler, then pgSTAC and the COGs in MinIO.</figcaption>
+</figure>
+
 COGs stay in MinIO and TiTiler reads only the bytes needed for each tile. The API forwards requests such as:
 
 - `/api/v1/tiles/collections/{collection_id}/items/{item_id}/{z}/{x}/{y}.{fmt}` for one scene
@@ -19,6 +24,11 @@ COGs stay in MinIO and TiTiler reads only the bytes needed for each tile. The AP
 Raster and vector requests share one forwarding helper (`forward_tile`), so errors and headers are handled the same way.
 
 ## Annotation vector tiles
+
+<figure class="doc-figure">
+  <a href="../assets/diagram-martin.svg"><img src="../assets/diagram-martin.svg" alt="Vector tile path: annotation tiles pass an organization check and a Redis cache, reference tiles pass a layer allowlist; the API forwards both to Martin, which reads PostGIS (annotation sets, Ramsar) and PMTiles in MinIO (the other seven reference layers)." loading="lazy"></a>
+  <figcaption>Vector tiles: Martin is reached only through the API, which checks the organization or the layer allowlist first.</figcaption>
+</figure>
 
 ### Why tiles instead of GeoJSON
 

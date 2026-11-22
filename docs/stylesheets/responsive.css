@@ -11,3 +11,10 @@
     font-size: 0.7rem;
   }
 }
+
+/* Two column blocks stack on tablets and phones. */
+@media screen and (max-width: 960px) {
+  .md-typeset .split {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

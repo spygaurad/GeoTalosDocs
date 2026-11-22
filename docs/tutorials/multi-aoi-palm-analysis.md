@@ -10,6 +10,11 @@ Run the same palm model over several study areas at once and get one report with
 | **Based on** | The multi-AOI palm analysis workflow in the GeoTALOS paper (Figure 4) |
 | **Do first** | [Palm crown detection](palm-crown-detection.md) |
 
+<figure class="doc-figure">
+  <a href="../assets/paper-fig4-multi-aoi.webp"><img src="../assets/paper-fig4-multi-aoi.webp" alt="Multi-AOI workflow: two Select Data Source nodes, one per AOI, each feed a Run Inference node with YOLO; both results go to one Overlay on Map node and one Generate Report node." loading="lazy"></a>
+  <figcaption>Multi-AOI palm analysis: data is clipped by AOI, YOLO runs on each, predictions are overlaid and one report is generated. Figure 4 of the GeoTALOS paper (SIGSPATIAL 2026).</figcaption>
+</figure>
+
 ## How the workflow works
 
 GeoTALOS clips the imagery to each AOI, runs the model on each clipped piece, overlays every result on the map and writes one report:

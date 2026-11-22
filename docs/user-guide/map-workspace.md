@@ -6,6 +6,11 @@ Open a map from your project's **Maps** tab. **Back to project** returns you to 
 
 ## Layout
 
+<figure class="doc-figure">
+  <a href="../assets/paper-fig3-map-workspace.webp"><img src="../assets/paper-fig3-map-workspace.webp" alt="The map workspace: top toolbar (pan and select, drawing tools, define AOI, data library, select basemap), layers panel on the left, map canvas in the centre with palm detections, information panel on the right with location, properties and buttons for dataset info, annotation set, visualization and model inference." loading="lazy"></a>
+  <figcaption>The map workspace. Figure 3 of the GeoTALOS paper (SIGSPATIAL 2026).</figcaption>
+</figure>
+
 | Area | What it holds |
 |---|---|
 | **Toolbar** (top) | Pan and select, drawing tools, define an AOI, the data library, the basemap picker |

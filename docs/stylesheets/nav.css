@@ -1,0 +1,28 @@
+/* Left navigation: clear hierarchy. Top level sections are larger, bolder
+   and darker; pages inside a section are smaller and lighter. */
+
+/* Top level: Home, Key Concepts, User Guide, ... */
+.md-nav--primary > .md-nav__list > .md-nav__item > .md-nav__link,
+.md-nav--primary > .md-nav__list > .md-nav__item > .md-nav__container > .md-nav__link {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--md-default-fg-color);
+}
+.md-nav--primary > .md-nav__list > .md-nav__item {
+  margin-top: 0.35em;
+}
+
+/* Pages inside a section, and the on this page list */
+.md-nav--primary .md-nav[data-md-level] .md-nav__link {
+  font-size: 0.7rem;
+  font-weight: 400;
+  color: var(--md-default-fg-color--light);
+}
+
+/* Hover and the current page keep the brand colour at every level */
+.md-nav--primary .md-nav__list .md-nav__item .md-nav__link:is(:hover, .md-nav__link--active) {
+  color: var(--md-typeset-a-color);
+}
+.md-nav--primary .md-nav[data-md-level] .md-nav__link--active {
+  font-weight: 600;
+}

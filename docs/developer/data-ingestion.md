@@ -2,6 +2,11 @@
 
 Imagery enters GeoTALOS in two stages: the browser uploads the file to object storage, then a background job validates it and registers it in the STAC catalog.
 
+<figure class="doc-figure">
+  <a href="../assets/diagram-ingestion.svg"><img src="../assets/diagram-ingestion.svg" alt="Ingestion: the browser uploads 50 MiB parts straight to MinIO with presigned URLs from the API; completing the upload queues a job that validates the file, reads its metadata, upserts a STAC Item into pgSTAC and creates a DatasetItem row." loading="lazy"></a>
+  <figcaption>Upload and ingestion at a glance.</figcaption>
+</figure>
+
 ## 1. Upload: multipart, straight to storage
 
 Large rasters are uploaded in parts so a failed part can be retried without starting over.

@@ -4,9 +4,19 @@ A **workflow** is a monitoring procedure built from connected steps called **nod
 
 ## Nodes
 
-Each node does one job, and the connections between nodes pass things along: imagery, model selections, predictions, metrics or reports. Nodes come in four groups.
+<div class="split" markdown>
+<div markdown>
 
-![Workflow node groups](../assets/workflow-nodes.jpg)
+Each node does one job, and the connections between nodes pass things along: imagery, model selections, predictions, metrics or reports.
+
+Nodes come in four groups. A typical workflow runs left to right: **Data** nodes choose the imagery and study area, **Model** nodes analyse it, and **Map** nodes put the results on the map for review. **Utility** nodes sit underneath and can join in at any step, for example to start the workflow on a schedule or to export the results.
+
+</div>
+<figure class="doc-figure">
+  <a href="../assets/paper-fig2-nodes.webp"><img src="../assets/paper-fig2-nodes.webp" alt="The four node groups: Data nodes (imagery, study area, spatial metadata) feed Model nodes (select model, run inference, refine), which feed Map nodes (map overlay, draft annotations, confirmed). Utility nodes (schedule triggers, webhooks, import and export, generate report) connect to all three." loading="lazy"></a>
+  <figcaption>Workflow node groups. Figure 2 of the GeoTALOS paper (SIGSPATIAL 2026).</figcaption>
+</figure>
+</div>
 
 | Group | What the nodes do | Examples |
 |---|---|---|
