@@ -71,6 +71,26 @@ With an image selected, the **Visualization** settings in the information panel 
 
 The dataset info shows technical details such as the coordinate system (**CRS**) and ground sample distance (**GSD**, the size of one pixel on the ground).
 
+<figure class="doc-figure">
+  <a href="../assets/screenshots/02-anel-orthomosaic-layer-style.jpg"><img src="../assets/screenshots/02-anel-orthomosaic-layer-style.jpg" alt="A drone orthomosaic of a mining area drawn on the map. The layers panel is on the left and the Layer style panel on the right shows raster info and band selection." loading="lazy"></a>
+  <figcaption>Selecting a raster layer opens the Layer style panel: its capture timestamps, raster info (coordinate system, pixel size, bands, data type), band selection and opacity.</figcaption>
+</figure>
+
+<figure class="doc-figure">
+  <a href="../assets/screenshots/03-linda2-orthomosaic.jpg"><img src="../assets/screenshots/03-linda2-orthomosaic.jpg" alt="A second drone orthomosaic of a mining area with its Layer style panel open." loading="lazy"></a>
+  <figcaption>Another orthomosaic from the same dataset. Each file is its own layer, so you can show, hide, reorder and style them one by one.</figcaption>
+</figure>
+
+<figure class="doc-figure">
+  <a href="../assets/screenshots/04-lindero-orthomosaic.jpg"><img src="../assets/screenshots/04-lindero-orthomosaic.jpg" alt="A three band RGB orthomosaic of a hillside, with the Layer style panel showing red, green and blue band selection." loading="lazy"></a>
+  <figcaption>A three band RGB image. Bands 1, 2 and 3 are shown as red, green and blue.</figcaption>
+</figure>
+
+<figure class="doc-figure">
+  <a href="../assets/screenshots/05-gocta-lidar.jpg"><img src="../assets/screenshots/05-gocta-lidar.jpg" alt="A LiDAR derived raster of a forested slope drawn over the satellite basemap, with the Layer style panel open." loading="lazy"></a>
+  <figcaption>A LiDAR derived raster. The dashed blue lines mark the extent of the layers on the map.</figcaption>
+</figure>
+
 ## Comparing dates
 
 When an AOI has imagery from several dates, **Temporal Playback** steps through them in date order, so you can watch change happen. See [Temporal analysis](temporal-analysis.md).

@@ -33,6 +33,11 @@ Opening a pipeline shows the editor:
 
 Click the pipeline's name to rename it.
 
+<figure class="doc-figure">
+  <a href="../assets/screenshots/09-pipeline-builder-nodes.jpg"><img src="../assets/screenshots/09-pipeline-builder-nodes.jpg" alt="The pipeline editor with a node catalog on the left and three connected nodes on the canvas: Select Data Source, Run Inference and Overlay on Map." loading="lazy"></a>
+  <figcaption>The editor with the Inference on an AOI recipe: Select Data Source feeds Run Inference, which feeds Overlay on Map. The catalog and recipes are on the left.</figcaption>
+</figure>
+
 ## Build a workflow
 
 1. **Add nodes** in any of three ways: drag from the catalog onto the canvas, right-click the canvas, or use the toolbar's add button.

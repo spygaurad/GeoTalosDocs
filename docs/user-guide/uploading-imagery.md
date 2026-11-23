@@ -23,6 +23,11 @@ Images must be **georeferenced** GeoTIFFs, so GeoTALOS knows where they belong o
     - **Tags** (optional): words to find the dataset later, for example `drone`, `2024`, `site-a`. Press Enter after each tag.
 4. Start the upload. Large files go up in parts, so a slow connection only resends the part that failed.
 
+<figure class="doc-figure">
+  <a href="../assets/screenshots/01-library-datasets.jpg"><img src="../assets/screenshots/01-library-datasets.jpg" alt="The Library window on a map, with the Rasters, Annotations, Sources and Upload tabs. Two ready datasets are listed, Gocta LiDAR and Sample orthomosaics, each with an Add button." loading="lazy"></a>
+  <figcaption>The Library on a map. Datasets that finished processing show as ready, each with an Add button. Screenshot from the sample data.</figcaption>
+</figure>
+
 ## What happens next
 
 After the upload, GeoTALOS processes the file in four stages, shown as a progress list:
