@@ -25,6 +25,16 @@ Licences and download links for each are in [Data sources and licences](../refer
 
 Each layer's credit appears in the attribution line at the bottom of the map while it is on.
 
+<figure class="doc-figure">
+  <a href="../assets/screenshots/06-ref-gfw-mining.jpg"><img src="../assets/screenshots/06-ref-gfw-mining.jpg" alt="Mining concession boxes from Global Forest Watch drawn densely over the Cusco and Madre de Dios region of Peru." loading="lazy"></a>
+  <figcaption>Mining concessions (Global Forest Watch) over the Cusco and Madre de Dios region. Where concessions overlap in large numbers the boxes crowd together at low zoom.</figcaption>
+</figure>
+
+<figure class="doc-figure">
+  <a href="../assets/screenshots/07-ref-protected-areas-cofopri-rivers.jpg"><img src="../assets/screenshots/07-ref-protected-areas-cofopri-rivers.jpg" alt="Amazon protected areas, Peru native communities and HydroRIVERS drawn together over southern Peru." loading="lazy"></a>
+  <figcaption>Amazon protected areas, Peru native communities and rivers switched on together. The layer credits appear in the attribution line at the bottom.</figcaption>
+</figure>
+
 ## Good to know
 
 - **Zoom range.** Each layer is drawn only between certain zoom levels. If a layer is on but you see nothing, zoom in or out, or move to the region it covers.
