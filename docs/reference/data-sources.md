@@ -14,16 +14,18 @@ These are served to every organization as [reference layers](../user-guide/refer
 | Logging concessions | [WRI Resource Watch](https://api.resourcewatch.org/v1/dataset/62c3d70c-d218-458f-8342-ee6a2b0ba434) | [Public Carto table](https://wri-01.carto.com/tables/gfw_logging) | Check the WRI dataset record |
 | HydroRIVERS (South America) | [HydroSHEDS](https://www.hydrosheds.org/products/hydrorivers) | [Shapefile ZIP](https://data.hydrosheds.org/file/HydroRIVERS/HydroRIVERS_v10_sa_shp.zip) | Check the HydroSHEDS terms |
 | USGS mineral deposits | [USGS MRDS](https://www.usgs.gov/publications/mineral-resources-data-system-mrds) | [mrds-trim.zip](https://mrdata.usgs.gov/mrds/mrds-trim.zip) | Public domain |
+| OpenStreetMap roads | [OpenStreetMap](https://www.openstreetmap.org/) via [Geofabrik](https://download.geofabrik.de/south-america.html) | Shapefile packages for Bolivia, northern Brazil, Colombia, Ecuador, Guyana, French Guiana, Peru, Suriname and Venezuela | [ODbL](https://www.openstreetmap.org/copyright). Credit OpenStreetMap contributors. Sharing a derived database carries share-alike terms. |
 | Peru native communities | [GEOCATMIN](https://geocatmin.ingemmet.gob.pe/geocatmin/) | [COFOPRI layer](https://geocatmin.ingemmet.gob.pe/arcgis/rest/services/SERV_OTRAS_FUENTES/MapServer/45) | No reuse licence stated in the service metadata. Confirm terms before redistributing. |
 
 Each layer's credit line shows on the map while the layer is on.
+
+Layers you upload yourself under [My layers](../user-guide/my-layers.md) are your own data. GeoTALOS does not check their licence, so make sure you may use them.
 
 ## Datasets considered but not served
 
 | Dataset | Status | Reason |
 |---|---|---|
 | WDPA (World Database on Protected Areas) | Not included | Its [terms](https://www.protectedplanet.net/c/terms-and-conditions) do not allow redistribution, including as downloadable map tiles, without written permission from UNEP-WCMC. |
-| OpenStreetMap roads | Planned | The regional extracts are 1.4 to 2.8 GB each. The plan is to use hosted [Protomaps](https://docs.protomaps.com/basemaps/downloads) tiles, which are under the [ODbL](https://www.openstreetmap.org/copyright) and need OpenStreetMap attribution. |
 | GADM administrative boundaries | Not built yet; allowed for academic use | GADM is free for academic and non-commercial use and restricts redistribution ([licence](https://gadm.org/license.html)). [geoBoundaries](https://www.geoboundaries.org/) (CC BY 4.0) is the alternative if commercial use is needed. |
 
 ## Models

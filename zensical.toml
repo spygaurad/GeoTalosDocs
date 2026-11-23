@@ -22,6 +22,7 @@ nav = [
     { "Uploading imagery" = "user-guide/uploading-imagery.md" },
     { "The map workspace" = "user-guide/map-workspace.md" },
     { "Reference layers" = "user-guide/reference-layers.md" },
+    { "My layers" = "user-guide/my-layers.md" },
     { "Running models" = "user-guide/running-models.md" },
     { "Reviewing annotations" = "user-guide/reviewing-annotations.md" },
     { "Temporal analysis" = "user-guide/temporal-analysis.md" },

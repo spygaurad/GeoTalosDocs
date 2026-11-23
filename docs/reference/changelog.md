@@ -4,6 +4,15 @@ Notable changes to GeoTALOS and these docs, newest first. Pull request numbers r
 
 ## November 2026
 
+**Vector layers: heatmaps, styles and uploads** (backend and UI, in review)
+
+- Dense reference layers can be drawn as a **heatmap**, with a radius and a weight, and switch back to boxes from zoom 10. The mining layers have heatmap tiles of 8 KB or less per tile.
+- A **Style** button on every reference layer sets colour and opacity, saved per organization and exposed through API routes.
+- Each layer has a descriptor listing its attributes, so new layers and fields need no UI change.
+- **My layers**: upload GeoJSON or CSV from the layers panel. The layer is private to the organization and served through an authenticated route.
+- A new **OpenStreetMap roads** layer for the Amazon region.
+- Docs: screenshots from the sample data added to the user guide.
+
 **Documentation**
 
 - This documentation site, with Key Concepts, a User Guide for ecologists, a Developer Guide, Tutorials and Reference.
