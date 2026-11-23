@@ -16,7 +16,14 @@ Reference layers are public maps you can switch on over your own imagery for con
 | **OpenStreetMap roads** | Main roads, unclassified roads and tracks | Amazon region (nine countries) | OpenStreetMap contributors (ODbL), via Geofabrik |
 | **Peru native communities** | Native community lands | Peru | COFOPRI via GEOCATMIN |
 
+The roads layer holds main roads, unclassified roads and tracks. Footpaths, service roads and residential streets are left out. Smaller roads appear as you zoom in: main roads from the widest view, tertiary roads from zoom level 8 and tracks from zoom level 10.
+
 Licences and download links for each are in [Data sources and licences](../reference/data-sources.md). Check the publisher's terms before reusing a layer outside GeoTALOS.
+
+<figure class="doc-figure">
+  <a href="../assets/screenshots/12-osm-roads.jpg"><img src="../assets/screenshots/12-osm-roads.jpg" alt="The OpenStreetMap roads layer in grey over western Brazil and Peru: a long highway runs between Cruzeiro do Sul and Rio Branco, with a dense network of roads around Rio Branco." loading="lazy"></a>
+  <figcaption>The OpenStreetMap roads layer around Rio Branco and Cruzeiro do Sul.</figcaption>
+</figure>
 
 ## Turn a layer on
 
