@@ -14,17 +14,21 @@ These are served to every organization as [reference layers](../user-guide/refer
 | Logging concessions | [WRI Resource Watch](https://api.resourcewatch.org/v1/dataset/62c3d70c-d218-458f-8342-ee6a2b0ba434) | [Public Carto table](https://wri-01.carto.com/tables/gfw_logging) | Check the WRI dataset record |
 | HydroRIVERS (South America) | [HydroSHEDS](https://www.hydrosheds.org/products/hydrorivers) | [Shapefile ZIP](https://data.hydrosheds.org/file/HydroRIVERS/HydroRIVERS_v10_sa_shp.zip) | Check the HydroSHEDS terms |
 | USGS mineral deposits | [USGS MRDS](https://www.usgs.gov/publications/mineral-resources-data-system-mrds) | [mrds-trim.zip](https://mrdata.usgs.gov/mrds/mrds-trim.zip) | Public domain |
+| OpenStreetMap roads | [OpenStreetMap](https://www.openstreetmap.org/) via [Geofabrik](https://download.geofabrik.de/south-america.html) | Shapefile packages for Bolivia, northern Brazil, Colombia, Ecuador, Guyana, French Guiana, Peru, Suriname and Venezuela | [ODbL](https://www.openstreetmap.org/copyright). Credit OpenStreetMap contributors. Sharing a derived database carries share-alike terms. |
+| Administrative boundaries | [GADM](https://gadm.org) | GADM 4.1 world GeoPackage, dissolved to levels 1 and 2 for the nine Amazon countries | Free for academic and other non commercial use; no redistribution ([licence](https://gadm.org/license.html)). [geoBoundaries](https://www.geoboundaries.org/) (CC BY 4.0) is the alternative if commercial use is needed. |
+| Population | [Kontur](https://www.kontur.io/portfolio/population-dataset/) via [HDX](https://data.humdata.org/organization/kontur) | Per country GeoPackages, release 2023-11-01 | CC BY 4.0 |
+| Threatened species records | [GBIF](https://www.gbif.org) | Occurrence search API: IUCN CR and EN, since 2000, nine countries (`fetch_gbif.py`) | Each record keeps its own licence (CC0, CC BY or CC BY-NC), stored in the tiles. Cite GBIF.org; a citable download with a DOI needs a GBIF account. |
 | Peru native communities | [GEOCATMIN](https://geocatmin.ingemmet.gob.pe/geocatmin/) | [COFOPRI layer](https://geocatmin.ingemmet.gob.pe/arcgis/rest/services/SERV_OTRAS_FUENTES/MapServer/45) | No reuse licence stated in the service metadata. Confirm terms before redistributing. |
 
 Each layer's credit line shows on the map while the layer is on.
+
+Layers you upload yourself under [My layers](../user-guide/my-layers.md) are your own data. GeoTALOS does not check their licence, so make sure you may use them.
 
 ## Datasets considered but not served
 
 | Dataset | Status | Reason |
 |---|---|---|
 | WDPA (World Database on Protected Areas) | Not included | Its [terms](https://www.protectedplanet.net/c/terms-and-conditions) do not allow redistribution, including as downloadable map tiles, without written permission from UNEP-WCMC. |
-| OpenStreetMap roads | Planned | The regional extracts are 1.4 to 2.8 GB each. The plan is to use hosted [Protomaps](https://docs.protomaps.com/basemaps/downloads) tiles, which are under the [ODbL](https://www.openstreetmap.org/copyright) and need OpenStreetMap attribution. |
-| GADM administrative boundaries | Not built yet; allowed for academic use | GADM is free for academic and non-commercial use and restricts redistribution ([licence](https://gadm.org/license.html)). [geoBoundaries](https://www.geoboundaries.org/) (CC BY 4.0) is the alternative if commercial use is needed. |
 
 ## Models
 
