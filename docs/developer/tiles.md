@@ -98,7 +98,8 @@ The data files are not in Git. Scripts in `scripts/reference_layers/` rebuild th
 | Script | Does |
 |---|---|
 | `load_ramsar.sh` | Loads Ramsar into PostGIS |
-| `build_pmtiles.sh` | Builds the PMTiles files with Tippecanoe: the eight layers and the two heatmap tilesets |
+| `build_pmtiles.sh` | Builds the PMTiles files with Tippecanoe: the layers and their heatmap tilesets |
+| `fetch_gbif.py` | Downloads the threatened species records from the GBIF search API |
 | `upload_pmtiles.sh` | Uploads them to the `reference-tiles` bucket |
 
 The README there lists each dataset's source. Licences are in [Data sources and licences](../reference/data-sources.md).
@@ -122,14 +123,16 @@ Users can override how a layer looks. The overrides are stored per organization 
 | `PUT /api/v1/reference-layers/{name}/style` | member | Replaces the override for one layer |
 | `DELETE /api/v1/reference-layers/{name}/style` | member | Back to the default look |
 
+A descriptor can name a `default_weight`, the heatmap weight used until a user picks one (population uses `population`). A saved `weight` of `null` means count the features, so it is kept as `null` and not dropped.
+
 A style can set `colour` (`#rrggbb`), `opacity` (0 to 1), `mode` (`boxes` or `heatmap`) and `heatmap` (`radius` 4 to 60 and `weight`, the name of a weight attribute or none). Only the fields that were set are stored. Unknown fields, a bad colour, a heatmap on a layer without heatmap tiles and a weight that is not a weight attribute of that layer all return 422.
 
 ## Heatmap tiles
 
 Drawing thousands of overlapping polygons is what makes dense layers heavy. A heatmap needs points, so for the two mining layers the build script makes a second tileset per layer: one point per polygon, placed inside it.
 
-- `raisg_mining_density` and `gfw_mining_density` are built by `build_pmtiles.sh raisg_mining_density gfw_mining_density`, after the polygon layers have been converted.
-- Each point carries `w`, the weight: the area in hectares for RAISG, and 1 for GFW, which has no area field.
+- `raisg_mining_density`, `gfw_mining_density`, `population_density` and `species_density` are built by `build_pmtiles.sh <name>`, after their layers have been converted.
+- Each point carries `w`, the weight: the area in hectares for RAISG, the number of people for population, and 1 for GFW and species.
 - Tippecanoe clusters points closer than 10 pixels (`--cluster-distance=10`) and adds up `w`; each cluster also gets a `point_count`. At zoom 12 every polygon is its own point.
 - These tilesets are served through the same route as the layers (`/reference-layers/raisg_mining_density/tiles/...`) but are not listed on their own. The layer list shows a `density_tile_url` on the layer that owns them, or `null` if the tileset has not been built.
 - Tiles stay small: in the Cusco and Madre de Dios area the largest RAISG heatmap tile is 8 KB, against 789 KB to 3.5 MB for the boxes.
@@ -143,13 +146,18 @@ Organizations can add their own vector layers from the map. They use the existin
 | Route | Role | Does |
 |---|---|---|
 | `POST /api/v1/feature-layers/upload?filename=...&layer_name=...&crs=...` | member | Adds a layer. The file is the raw request body. |
-| `GET /api/v1/feature-layers/layers` | viewer | Layers with feature count, bounds, geometry types and attribute names |
-| `GET /api/v1/feature-layers/layers/{name}/tiles/{z}/{x}/{y}.pbf` | viewer | Tiles for one layer |
+| `GET /api/v1/feature-layers/layers` | viewer | Layers with feature count, bounds, geometry types, attribute descriptors and the saved style |
+| `GET /api/v1/feature-layers/layers/{name}/tiles/{z}/{x}/{y}.pbf` | viewer | Tiles for one layer. `?points=true&weight=<column>` returns one point per feature for the heatmap |
+| `PUT /api/v1/feature-layers/layers/{name}/style` | member | Saves the style, same body as the reference layer style |
+| `DELETE /api/v1/feature-layers/layers/{name}/style` | member | Back to the default look |
 | `DELETE /api/v1/feature-layers/layers/{name}` | admin | Deletes the layer and its features |
 
 - **Upload.** `app/services/vector_upload.py` reads GeoJSON and CSV (the CSV reader is the one used for annotation imports). `crs` is the file's coordinate system if it is not EPSG:4326; it is reprojected. Each feature goes through `validate_wgs84_geometry`; bad ones are skipped and counted, and the first five reasons come back. Limits: 50 MB and 100,000 features. The body is sent raw instead of as a form so the API needs no multipart dependency.
 - **Names.** A layer name is 1 to 120 letters, numbers, spaces and `. ( ) _ -`. A name that already exists in the organization returns 409.
 - **Tiles.** Martin serves `feature_layer_mvt(z, x, y, org_id, layer)` (migration 077), the same pattern as `annotation_set_mvt`. Martin bypasses row-level security, so the function filters by organization and the API passes `org_id` from the caller's token, never from the request. Properties are flattened into tile attributes. Responses are `Cache-Control: private, no-store`.
+- **Descriptors.** The list builds a descriptor per layer from the stored properties: a column whose values are all numbers is `kind: number`, can weight a heatmap, and comes with its `max` so the UI can scale it. CSV cells that look like plain decimal numbers are stored as numbers on upload.
+- **Heatmap.** With `points=true` the function returns `ST_PointOnSurface` of each feature and the weight column as `w` (1 when there is none, or the value is not a number). No tile buffer, because the browser reads the neighbour tiles itself.
+- **Styles.** Stored in `reference_layer_styles` under the key `upload:<layer name>`, and removed with the layer.
 - **Indexes.** Migration 077 adds a GiST index on the geometry and one on `(organization_id, layer_name)`.
 
 This path suits layers of up to tens of thousands of features, because tiles are cut live in PostGIS. For very large data, such as a country road network, build a PMTiles file and add it as a reference layer instead.
@@ -157,3 +165,11 @@ This path suits layers of up to tens of thousands of features, because tiles are
 ## OpenStreetMap roads
 
 `build_pmtiles.sh osm_roads` builds the roads layer from the Geofabrik shapefile packages (`SRC/osm_roads/<country>-latest-free.shp.zip`, nine countries). Footpaths, steps, service roads and residential streets are left out. What stays is motorway, trunk, primary, secondary, tertiary, unclassified roads and tracks. Tippecanoe gates the classes by zoom: main roads from zoom 4, secondary from 6, tertiary from 8, unclassified from 9 and tracks from 10.
+
+## Boundaries, population and species
+
+| Layer | Build | Notes |
+|---|---|---|
+| `gadm` | `build_pmtiles.sh gadm` | GADM 4.1 is one world layer at the finest level. The script unzips it into `WORK` and dissolves it with `ST_Union` to level 1 and level 2 for the nine countries, then keeps the boundary lines (`ST_Boundary`). Lines, not polygons: an outline drawn from polygons also strokes the edges where each tile clips them. Attribute `level` gates the zoom: level 1 from zoom 0, level 2 from zoom 6. |
+| `population`, `population_density` | `build_pmtiles.sh population population_density` | Kontur 400 m H3 hexagons from `SRC/kontur_population/*.gpkg.gz`, read through `/vsigzip`. Hexagons from zoom 10, heatmap below, weighted by `population`. |
+| `species`, `species_density` | `python scripts/reference_layers/fetch_gbif.py SRC/gbif_threatened`, then `build_pmtiles.sh species species_density` | GBIF records of IUCN CR and EN species since 2000. The search API stops at 100,000 records per query, so the script runs one query per country. For VU as well, or a citable DOI, use the GBIF download API with an account. |

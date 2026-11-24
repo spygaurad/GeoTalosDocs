@@ -11,6 +11,8 @@ Notable changes to GeoTALOS and these docs, newest first. Pull request numbers r
 - Each layer has a descriptor listing its attributes, so new layers and fields need no UI change.
 - **My layers**: upload GeoJSON or CSV from the layers panel. The layer is private to the organization and served through an authenticated route.
 - A new **OpenStreetMap roads** layer for the Amazon region.
+- New reference layers: **administrative boundaries** (GADM), **population** (Kontur, with a heatmap) and **threatened species records** (GBIF, with a heatmap).
+- Uploaded layers get the same **Style** controls and heatmap as the reference layers. Any numeric column can weight the heatmap.
 - Docs: screenshots from the sample data added to the user guide.
 
 **Documentation**

@@ -15,6 +15,9 @@ Reference layers are public maps you can switch on over your own imagery for con
 | **USGS mineral deposits** | Mineral deposit locations | Worldwide | USGS MRDS (public domain) |
 | **OpenStreetMap roads** | Main roads, unclassified roads and tracks | Amazon region (nine countries) | OpenStreetMap contributors (ODbL), via Geofabrik |
 | **Peru native communities** | Native community lands | Peru | COFOPRI via GEOCATMIN |
+| **Administrative boundaries** | States, and provinces or municipalities | Amazon region (nine countries) | GADM 4.1 (academic and non commercial use) |
+| **Population** | People per 400 m hexagon, 2023 | Amazon region (nine countries) | Kontur Population (CC BY 4.0) |
+| **Threatened species records** | Sightings and specimens of critically endangered and endangered species, since 2000 | Amazon region (nine countries) | GBIF.org, each record under its own licence |
 
 The roads layer holds main roads, unclassified roads and tracks. Footpaths, service roads and residential streets are left out. Smaller roads appear as you zoom in: main roads from the widest view, tertiary roads from zoom level 8 and tracks from zoom level 10.
 
@@ -23,6 +26,24 @@ Licences and download links for each are in [Data sources and licences](../refer
 <figure class="doc-figure">
   <a href="../assets/screenshots/12-osm-roads.jpg"><img src="../assets/screenshots/12-osm-roads.jpg" alt="The OpenStreetMap roads layer in grey over western Brazil and Peru: a long highway runs between Cruzeiro do Sul and Rio Branco, with a dense network of roads around Rio Branco." loading="lazy"></a>
   <figcaption>The OpenStreetMap roads layer around Rio Branco and Cruzeiro do Sul.</figcaption>
+</figure>
+
+**Administrative boundaries** are lines only, so they can sit on top of other layers. States show at every zoom; provinces (or municipalities in Brazil) from zoom level 6.
+
+**Population** shows as a heatmap when zoomed out and as hexagons from zoom level 10. Each hexagon is about 400 m across and holds the number of people living in it.
+
+
+<figure class="doc-figure">
+  <a href="../assets/screenshots/13-population-boundaries.jpg"><img src="../assets/screenshots/13-population-boundaries.jpg" alt="The population heatmap in purple over Peru, Bolivia and western Brazil, with administrative boundary lines on top. The Andes and cities such as Lima, Cusco, La Paz and Santa Cruz are dark; most of the Amazon lowland is pale." loading="lazy"></a>
+  <figcaption>Population as a heatmap with the administrative boundaries. People live mostly along the Andes and in the cities.</figcaption>
+</figure>
+
+**Threatened species records** are single observations from [GBIF](https://www.gbif.org): one dot per record of a species that the IUCN Red List lists as critically endangered (CR) or endangered (EN). A dot means someone recorded the species there, not that its whole range is there. Areas with many surveys have more dots, so the heatmap shows survey effort as well as where species live.
+
+
+<figure class="doc-figure">
+  <a href="../assets/screenshots/14-species-heatmap.jpg"><img src="../assets/screenshots/14-species-heatmap.jpg" alt="The threatened species heatmap in green over Colombia, Ecuador, Peru, the Guianas and northern Brazil." loading="lazy"></a>
+  <figcaption>Threatened species records as a heatmap. Darker areas have more records, which also means more surveys.</figcaption>
 </figure>
 
 ## Turn a layer on
@@ -67,9 +88,9 @@ Your choices are saved for your organization, so the next person who opens a map
 
 Mining concessions are drawn as thousands of small boxes that overlap and hide each other when you zoom out. A **heatmap** shows the same layer as a soft colour surface instead: pale where there is little mining, dark where there is a lot. It is also much lighter to load.
 
-- The heatmap is available for **Amazon mining (RAISG)** and **Mining concessions (GFW)**.
+- The heatmap is available for **Amazon mining (RAISG)**, **Mining concessions (GFW)**, **Population** and **Threatened species records**, and for every layer under [My layers](my-layers.md).
 - It shows from the most zoomed out view down to zoom level 9. From zoom level 10 the real boxes appear, because at that scale the areas are far enough apart to see one by one.
-- With **Weight** set to **Number of areas**, every mining area counts the same. Set it to **Area** and large areas count for more.
+- With **Weight** set to **Number of areas**, every mining area counts the same. Set it to **Area** and large areas count for more. Population is weighted by **Population** from the start, so a crowded hexagon counts for more than a nearly empty one. Pick **Number of areas** to see only where people live at all.
 
 <figure class="doc-figure">
   <a href="../assets/screenshots/06-ref-gfw-mining.jpg"><img src="../assets/screenshots/06-ref-gfw-mining.jpg" alt="Mining concession boxes drawn densely over the Cusco and Madre de Dios region of Peru." loading="lazy"></a>
@@ -88,3 +109,5 @@ Mining concessions are drawn as thousands of small boxes that overlap and hide e
 - Check whether palm detections fall inside a protected area.
 - See which mining concessions overlap an area where your imagery shows forest loss.
 - Use HydroRIVERS to find river sections near detected mining activity.
+- Turn on population and roads together to see how close people and access are to a mining area.
+- Check which threatened species were recorded near a site before planning field work.
